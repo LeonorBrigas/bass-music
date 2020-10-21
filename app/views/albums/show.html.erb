@@ -1,0 +1,19 @@
+<div class="show row">
+  <div class="cover col-md-4"><img src="<%= @album.cover %>" class="cover mr-6"></div>
+
+  <div class="col-sm-8">
+    <h3 class="album-title"><%= @album.title %> </h3>
+    <p class="album-artist"><%=  @album.artist %></p>
+
+    <div class="tracks">
+      <% @tracks.each do |track| %>
+      <div class="track row">
+        <div class="name col-xs-8"><%= track.name %></div>
+        <div class="minutes col-xs-4"><%= track.minutes %>min</div>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
